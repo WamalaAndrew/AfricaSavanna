@@ -68,10 +68,10 @@ const Hero = () => {
   const [offsetY, setOffsetY] = useState(0);
 
   const images = [
-    "/giraffes.jpg",
-    "/hikers.jpg",
-    "/lioness.jpg",
-    "/elephants.jpg"
+    "https://i.imgur.com/y0uDq0K.jpeg",
+    "https://i.imgur.com/gMHJRCF.jpeg",
+    "https://i.imgur.com/X4N6WK0.jpeg",
+    "https://i.imgur.com/NmfxR2X.jpeg"
   ];
 
   useEffect(() => {
@@ -174,7 +174,7 @@ const Features = () => {
           <div className="relative">
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden">
               <img 
-                src="/giraffes.jpg" 
+                src="https://i.imgur.com/y0uDq0K.jpeg" 
                 alt="Giraffes in the wild" 
                 className="w-full h-full object-cover"
               />
@@ -201,12 +201,12 @@ const Tours = () => {
     {
       title: "Best of Kenya & Tanzania",
       duration: "10 Days",
-      image: "/elephants.jpg",
+      image: "https://i.imgur.com/NmfxR2X.jpeg",
       description: "Experience the ultimate migration path across the Mara and Serengeti.",
       details: "Highlights: Masai Mara, Serengeti National Park, Ngorongoro Crater, Lake Nakuru. Includes all luxury park lodges, private 4x4 Land Cruiser with expert guides, and park entry fees.",
       itinerary: ["Day 1-2: Nairobi to Masai Mara", "Day 3-4: Serengeti plains tracking", "Day 5: Ngorongoro Crater descent", "Day 6-10: Luxury lodges & continuous migration viewing"],
       includedServices: ["Luxury park lodges", "Private 4x4 Land Cruiser", "Expert local guides", "All park entry fees"],
-      videoThumbnail: "/elephants.jpg",
+      videoThumbnail: "https://i.imgur.com/NmfxR2X.jpeg",
       videoUrl: "https://www.youtube.com/embed/P6aAh1V6w2Y",
       videoDescription: "Giraffes roaming the golden plains of the Serengeti.",
       tags: ["wildlife", "safari", "luxury"]
@@ -214,12 +214,12 @@ const Tours = () => {
     {
       title: "Gorillas & Golden Monkeys",
       duration: "5 Days",
-      image: "/gorillas.jpg",
+      image: "https://i.imgur.com/P7v47V4.jpeg",
       description: "Trek through the misty mountains of Rwanda and Uganda.",
       details: "Highlights: Bwindi Impenetrable Forest, Volcanoes National Park tracking. Includes highly sought-after gorilla tracking permits, luxury eco-lodge stays, and cultural community visits.",
       itinerary: ["Day 1: Arrival in Kigali", "Day 2: Transfer to Bwindi/Volcanoes", "Day 3: Gorilla Trekking", "Day 4: Golden Monkey Tracking", "Day 5: Cultural Tour & Departure"],
       includedServices: ["Gorilla tracking permits", "Luxury eco-lodge stays", "Local transfers & guided tours", "Community visits"],
-      videoThumbnail: "/gorillas.jpg",
+      videoThumbnail: "https://i.imgur.com/P7v47V4.jpeg",
       videoUrl: "https://www.youtube.com/embed/LXb3EKWsInQ",
       videoDescription: "A glimpse into the lush, wild mountain gorilla habitats.",
       tags: ["trekking", "adventure", "wildlife"]
@@ -519,7 +519,7 @@ const Destinations = () => {
           <a href="#tours" className="group relative h-96 rounded-3xl overflow-hidden flex flex-col justify-end">
             <div className="absolute inset-0 bg-stone-900/30 group-hover:bg-stone-900/40 transition-colors z-10 duration-500"></div>
             <img 
-              src="/zebras.jpg" 
+              src="https://i.imgur.com/GXWUufD.jpeg" 
               alt="Serengeti, Tanzania" 
               className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
             />
