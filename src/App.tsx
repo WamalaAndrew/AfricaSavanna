@@ -90,7 +90,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[100svh] min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0 bg-stone-900" style={{ transform: `translateY(${offsetY * 0.5}px)` }}>
         {images.map((img, index) => (
@@ -98,7 +98,7 @@ const Hero = () => {
             key={img}
             src={img} 
             alt={`Safari Background ${index + 1}`} 
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${index === currentImage ? 'opacity-100 scale-105' : 'opacity-0 scale-100'}`}
+            className={`absolute inset-0 w-full h-full object-cover object-[50%_30%] transition-opacity duration-1000 ease-in-out ${index === currentImage ? 'opacity-100 scale-105' : 'opacity-0 scale-100'}`}
           />
         ))}
         <div className="absolute inset-0 bg-stone-900/40 transition-opacity duration-1000"></div>
@@ -171,12 +171,12 @@ const Features = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden">
+          <div className="relative mt-8 lg:mt-0">
+            <div className="aspect-square md:aspect-[4/5] rounded-[2rem] overflow-hidden">
               <img 
                 src="https://i.imgur.com/y0uDq0K.jpeg" 
                 alt="Giraffes in the wild" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-3xl shadow-xl max-w-[240px] hidden md:block">
@@ -332,12 +332,12 @@ const Tours = () => {
                     {Math.round(((tour as any).matchScore / preferences.length) * 100)}% Match
                  </div>
               )}
-              <div className="relative aspect-[3/4] overflow-hidden cursor-pointer" onClick={() => setSelectedTour(idx)}>
+              <div className="relative aspect-[4/3] sm:aspect-square md:aspect-[3/4] overflow-hidden cursor-pointer" onClick={() => setSelectedTour(idx)}>
                 <div className="absolute inset-0 bg-stone-900/20 group-hover:bg-transparent transition-all z-10 duration-500"></div>
                 <img 
                   src={tour.image} 
                   alt={tour.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute top-4 right-4 z-20 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-y-2 group-hover:translate-y-0">
                   <button className="w-8 h-8 rounded-full bg-white/10 backdrop-blur text-white flex items-center justify-center hover:bg-brand-rust transition-colors" onClick={(e) => { e.stopPropagation(); window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank'); }} aria-label="Share on Facebook">
@@ -500,12 +500,12 @@ const Destinations = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          <a href="#tours" className="group relative h-96 rounded-3xl overflow-hidden flex flex-col justify-end">
+          <a href="#tours" className="group relative h-80 md:h-96 rounded-3xl overflow-hidden flex flex-col justify-end">
             <div className="absolute inset-0 bg-stone-900/30 group-hover:bg-stone-900/40 transition-colors z-10 duration-500"></div>
             <img 
               src="https://images.unsplash.com/photo-1484318571209-661cf29a69c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
               alt="Masai Mara, Kenya" 
-              className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             <div className="relative p-8 z-20">
               <h3 className="font-serif text-3xl text-white mb-2 group-hover:text-brand-sand transition-colors">Masai Mara, Kenya</h3>
@@ -516,12 +516,12 @@ const Destinations = () => {
             </div>
           </a>
           
-          <a href="#tours" className="group relative h-96 rounded-3xl overflow-hidden flex flex-col justify-end">
+          <a href="#tours" className="group relative h-80 md:h-96 rounded-3xl overflow-hidden flex flex-col justify-end">
             <div className="absolute inset-0 bg-stone-900/30 group-hover:bg-stone-900/40 transition-colors z-10 duration-500"></div>
             <img 
               src="https://i.imgur.com/GXWUufD.jpeg" 
               alt="Serengeti, Tanzania" 
-              className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             <div className="relative p-8 z-20">
               <h3 className="font-serif text-3xl text-white mb-2 group-hover:text-brand-sand transition-colors">Serengeti, Tanzania</h3>
